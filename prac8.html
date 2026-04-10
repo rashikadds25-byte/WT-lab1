@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0; background: #050505; color: #fff;
+            font-family: 'Space Grotesk', sans-serif;
+            background-image: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #050505 100%);
+        }
+
+        /* 1. Neon Glow Animation */
+        @keyframes neonPulse {
+            0%, 100% { text-shadow: 0 0 10px #f0abfc, 0 0 20px #f0abfc; }
+            50% { text-shadow: 0 0 20px #c084fc, 0 0 40px #c084fc; }
+        }
+
+        .container { max-width: 900px; margin: auto; padding: 50px 20px; text-align: center; }
+
+        /* 2. Retro Pixel Header */
+        .hero-title {
+            font-size: clamp(3rem, 10vw, 5rem);
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            color: #f0abfc;
+            animation: neonPulse 2s infinite;
+        }
+
+        /* 3. Multi-Column Layout (Magazine Style) */
+        .magazine-grid {
+            column-count: 2; column-gap: 50px; text-align: left;
+            margin-top: 40px; color: #94a3b8; line-height: 1.8;
+            column-rule: 1px dashed #334155;
+        }
+
+        /* 4. Cyber-Cards with 3D Transform */
+        .grid { display: flex; gap: 20px; margin-top: 40px; }
+        .cyber-card {
+            flex: 1; padding: 30px; border: 1px solid #334155;
+            background: rgba(255, 255, 255, 0.02); border-radius: 4px;
+            transition: 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+            position: relative; overflow: hidden;
+        }
+        .cyber-card:hover {
+            transform: perspective(1000px) rotateY(15deg) translateY(-10px);
+            border-color: #f0abfc; background: rgba(240, 171, 252, 0.05);
+        }
+        .cyber-card i { font-size: 2.5rem; color: #f0abfc; margin-bottom: 15px; }
+
+        @media (max-width: 768px) {
+            .magazine-grid { column-count: 1; }
+            .grid { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="hero-title">Future <br> Retro</h1>
+        <p style="color: #6366f1; font-weight: bold; letter-spacing: 5px;">EST. 2026</p>
+
+        <div class="grid">
+            <div class="cyber-card"><i class="fa-solid fa-microchip"></i><h3>Neural</h3></div>
+            <div class="cyber-card"><i class="fa-solid fa-clapperboard"></i><h3>Cine</h3></div>
+            <div class="cyber-card"><i class="fa-solid fa-satellite-dish"></i><h3>Signal</h3></div>
+        </div>
+
+        <div class="magazine-grid">
+            <p><strong>Retrofuturism</strong> is more than just a trend; it is a bridge between the analog past and the digital future. By using high-contrast neon palettes and bold typography, we evoke a sense of mystery and speed.</p>
+            <p>Technically, this page leverages <strong>CSS Column-Count</strong> to flow text smoothly, while <strong>3D Transforms</strong> give the interactive cards a tactile feel that standard flat designs lack.</p>
+        </div>
+    </div>
+</body>
+</html>
