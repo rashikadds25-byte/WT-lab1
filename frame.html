@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Media Dashboard</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            padding: 20px;
+        }
+
+        .glass-container {
+            width: 100%;
+            max-width: 1300px;
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 { text-align: center; margin-bottom: 40px; font-weight: 200; font-size: 2.5rem; letter-spacing: 3px; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .card:hover { 
+            transform: scale(1.02);
+            background: rgba(0, 0, 0, 0.4);
+            border-color: #764ba2;
+        }
+
+        .card-header { 
+            padding: 15px; 
+            background: rgba(255, 255, 255, 0.05); 
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glass-container">
+        <h1>Digital Universe</h1>
+        
+        <div class="grid">
+            <!-- 1. External Page -->
+            <div class="card">
+                <div class="card-header">🌐 Web View</div>
+                <iframe src="https://wikipedia.org"></iframe>
+            </div>
+
+            <!-- 2. YouTube Video -->
+            <div class="card">
+                <div class="card-header">🎬 Cinema Mode</div>
+                <!-- Replace 'dQw4w9WgXcQ' with your YouTube Video ID -->
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/yuNCDGLGwS0?si=zNMpb9L3ejPYxb9E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- 3. Google Map -->
+            <div class="card">
+                <div class="card-header">📍 Navigation</div>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.4760045669577!2d78.97070457556296!3d21.212964980482827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4e97f454d37d5%3A0x32dca0144110c4a8!2sS.%20B.%20Jain%20Institute%20of%20Technology%2C%20Management%20%26%20Research%2C%20Nagpur!5e0!3m2!1sen!2sin!4v1776524087049!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
